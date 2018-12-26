@@ -1,0 +1,96 @@
+/*
+   Microsoft SQL Server Integration Services Script Task
+   Write scripts using Microsoft Visual C# 2008.
+   The ScriptMain is the entry point class of the script.
+*/
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Runtime;
+using System.Data.OleDb;
+using System.Collections.Generic;
+using System.Linq;
+using System.Data.DataSetExtensions;
+
+
+namespace ST_30252657c7a343b0b398db65f40002d5.csproj
+{
+    [System.AddIn.AddIn("ScriptMain", Version = "1.0", Publisher = "", Description = "")]
+    public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+    {
+
+        #region VSTA generated code
+        enum ScriptResults
+        {
+            Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
+            Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+        };
+        #endregion
+
+        /*
+		The execution engine calls this method when the task executes.
+		To access the object model, use the Dts property. Connections, variables, events,
+		and logging features are available as members of the Dts property as shown in the following examples.
+
+		To reference a variable, call Dts.Variables["MyCaseSensitiveVariableName"].Value;
+		To post a log entry, call Dts.Log("This is my log text", 999, null);
+		To fire an event, call Dts.Events.FireInformation(99, "test", "hit the help message", "", 0, true);
+
+		To use the connections collection use something like the following:
+		ConnectionManager cm = Dts.Connections.Add("OLEDB");
+		cm.ConnectionString = "Data Source=localhost;Initial Catalog=AdventureWorks;Provider=SQLNCLI10;Integrated Security=SSPI;Auto Translate=False;";
+
+		Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+		
+		To open Help, press F1.
+    //*/
+
+        public void Main()
+        {
+            // TODO: Add your code here
+            string pkgLocation = @"E:\SSIS\Packages\AccountingAutomation\RegionSplit\AccountingAutomation\AccountingAutomation\";
+            DataTable dt = new DataTable();
+            OleDbDataAdapter oleda = new OleDbDataAdapter();
+            oleda.Fill(dt, Dts.Variables["User::RegionJobAttributes"].Value);
+            int job_count = dt.Rows.Count;
+            int job_run = 0;
+            int job_step = 3;
+
+            for (int i = 0; i < job_count; i += job_step)
+            {                
+                if ((i == job_step) || ((i % job_step) == 0))
+                {                    
+                    job_run = job_run + 1;
+                }
+            }
+
+            if (job_run == 0)
+            {
+                job_run = 1;
+            }
+
+            for (int i = 1; i < (job_run  + 1); i += 1)
+            {                
+                if (i == 1)
+                {
+                    var t1 = dt.AsEnumerable().Take(job_step).CopyToDataTable();
+
+                    //Application app = new Application();
+                    //MessageBox.Show(t1.Rows.Count.ToString());
+                }
+                else
+                {
+                    var t1 = dt.AsEnumerable().Skip(job_step).Take(job_step).CopyToDataTable();
+                    
+                    //MessageBox.Show(t1.Rows.Count.ToString());
+                }
+            }
+            
+ 
+            //string region1 = t1.Rows[0]["RegionID"].ToString();
+            //MessageBox.Show(region1);
+
+            Dts.TaskResult = (int)ScriptResults.Success;
+        }
+    }
+}
