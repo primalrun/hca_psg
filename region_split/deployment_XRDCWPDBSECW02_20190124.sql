@@ -1859,9 +1859,9 @@ SELECT  ''eCW'' AS SourceSystemCode ,
             SUBSTRING(COALESCE(PmtEnt.COID, PmtProvEnt.COID, DelPmtEnt.COID, DelPmtProvEnt.COID), 1, 8) AS SourceCOID,
             SUBSTRING(COALESCE(PmtCoMast.COID, PmtProvCoMast.COID, DelPmtCoMast.COID, DelPmtProvCoMast.COID), 1, 8) AS CoMastCOID,
             SUBSTRING(COALESCE(PmtEnt.DeptCode, PmtProvEnt.DeptCode, DelPmtEnt.DeptCode, DelPmtProvEnt.DeptCode), 1, 8) AS DepartmentCode ,
-            CASE WHEN (InsPmtType.pmtType in ( ''Payment - NSF'',''PAYMENTS – INS STOP PMT'')) THEN 
+            CASE WHEN (InsPmtType.pmtType in ( ''Payment - NSF'',''PAYMENTS Â– INS STOP PMT'')) THEN 
 							''110091''
-				 WHEN (DelInsPmtType.pmtType in ( ''Payment - NSF'',''PAYMENTS – INS STOP PMT'')) THEN 
+				 WHEN (DelInsPmtType.pmtType in ( ''Payment - NSF'',''PAYMENTS Â– INS STOP PMT'')) THEN 
 							''110091''							
 						ELSE 
 							COALESCE(PmtAcctX.Account, DelPmtAcctX.Account) 
@@ -1986,7 +1986,7 @@ FROM ' + @ServerName + '.' + @DatabaseName + '.dbo.transactions AS t
                         CASE WHEN pmtDescription LIKE ''%NSF%''
                              THEN ''PAYMENT - NSF''
                              WHEN pmtDescription LIKE ''%stop%''
-								THEN ''PAYMENTS – INS STOP PMT''  
+								THEN ''PAYMENTS Â– INS STOP PMT''  
                              ELSE ''PAYMENT''
                         END AS pmtType ,
                         pmtDescription ,
@@ -2000,8 +2000,8 @@ FROM ' + @ServerName + '.' + @DatabaseName + '.dbo.transactions AS t
                         Category ,
                         CASE WHEN TrType = ''Payment - nsf''
                              THEN ''PAYMENT - NSF''
-                             WHEN TrType = ''PAYMENTS – INS STOP PMT''
-                             THEN  ''PAYMENTS – INS STOP PMT''
+                             WHEN TrType = ''PAYMENTS Â– INS STOP PMT''
+                             THEN  ''PAYMENTS Â– INS STOP PMT''
                              ELSE ''PAYMENT''
                         END AS TrTypeDesc
                FROM     ' + @ServerName + '.ecwstage.eCWStage.StgHostGLTrTypeList
@@ -2072,7 +2072,7 @@ SET @SQL4 = '
                         CASE WHEN pmtDescription LIKE ''%NSF%''
                              THEN ''PAYMENT - NSF''
                              WHEN pmtDescription LIKE ''%stop%''
-								THEN ''PAYMENTS – INS STOP PMT''  
+								THEN ''PAYMENTS Â– INS STOP PMT''  
                              ELSE ''PAYMENT''
                         END AS pmtType ,
                         pmtDescription ,
@@ -2086,8 +2086,8 @@ SET @SQL4 = '
                         Category ,
                         CASE WHEN TrType = ''Payment - nsf''
                              THEN ''PAYMENT - NSF''
-                             WHEN TrType = ''payments – ins stop pmt''
-                             THEN  ''PAYMENTS – INS STOP PMT''
+                             WHEN TrType = ''payments Â– ins stop pmt''
+                             THEN  ''PAYMENTS Â– INS STOP PMT''
                              ELSE ''PAYMENT''
                         END AS TrTypeDesc
                FROM     ' + @ServerName + '.ecwstage.eCWStage.StgHostGLTrTypeList
