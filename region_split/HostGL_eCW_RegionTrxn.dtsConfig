@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<DTSConfiguration>
+	<DTSConfigurationHeading>
+		<DTSConfigurationFileInfo GeneratedBy="HCA\QHI6494" GeneratedFromPackageName="HostGL_eCW_RegionTrxn" GeneratedFromPackageID="{340D4E74-08DA-47F5-95E5-275D6F991021}" GeneratedDate="1/29/2019 1:16:45 PM"/>
+	</DTSConfigurationHeading>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[AcctAuto_CM].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>Data Source=BSC1WDDBSMSC01;Initial Catalog=AccountingAutomation;Provider=SQLNCLI10.1;Integrated Security=SSPI;Auto Translate=False;</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[AcctAuto_CM].Properties[ServerName]" ValueType="String">
+		<ConfiguredValue>BSC1WDDBSMSC01</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[AuditControl_CM].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>Data Source=NADCWDDBSECW02, 56251;Initial Catalog=ecwStage;Provider=SQLNCLI10.1;Integrated Security=SSPI;Auto Translate=False;</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[AuditControl_CM].Properties[ServerName]" ValueType="String">
+		<ConfiguredValue>NADCWDDBSECW02, 56251</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[GLJobRun1_CM].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>E:\SSIS\Packages\AccountingAutomation\HostGL_eCW_JobShell1.dtsx</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[GLJobRun2_CM].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>E:\SSIS\Packages\AccountingAutomation\HostGL_eCW_JobShell2.dtsx</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[GLJobRun3_CM].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>E:\SSIS\Packages\AccountingAutomation\HostGL_eCW_JobShell3.dtsx</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[GLJobRun4_CM].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>E:\SSIS\Packages\AccountingAutomation\HostGL_eCW_JobShell4.dtsx</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[GLJobRun5_CM].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>E:\SSIS\Packages\AccountingAutomation\HostGL_eCW_JobShell5.dtsx</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Variables[User::ChildPackagePath].Properties[Value]" ValueType="String">
+		<ConfiguredValue>E:\SSIS\Packages\AccountingAutomation\</ConfiguredValue>
+	</Configuration>
+</DTSConfiguration>

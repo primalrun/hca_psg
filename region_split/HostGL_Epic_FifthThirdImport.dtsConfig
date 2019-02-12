@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<DTSConfiguration>
+	<DTSConfigurationHeading>
+		<DTSConfigurationFileInfo GeneratedBy="HCA\qhi6494" GeneratedFromPackageName="HostGL_Epic_FifthThirdImport" GeneratedFromPackageID="{42C0368E-1D61-4CF4-B0F3-217D5066D44A}" GeneratedDate="2/12/2019 2:21:27 PM"/>
+	</DTSConfigurationHeading>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[AcctAuto].Properties[ServerName]" ValueType="String">
+		<ConfiguredValue>BSC1WDDBSMSC01</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[eCWStage].Properties[ServerName]" ValueType="String">
+		<ConfiguredValue>NADCWDDBSECW02, 56251</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Variables[User::ArchiveFullFileName].Properties[Value]" ValueType="String">
+		<ConfiguredValue>\\corpdpt02\dfs\eCW FTP Area\53Bank\53Dev\53Epic\53Archive\</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Variables[User::FileArchiveSource].Properties[Value]" ValueType="String">
+		<ConfiguredValue>\\corpdpt02\dfs\eCW FTP Area\53Bank\53Dev\53Epic\53Archive</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Variables[User::FullSourcePathLoad].Properties[Value]" ValueType="String">
+		<ConfiguredValue>\\corpdpt02\dfs\eCW FTP Area\53Bank\53Dev\53Epic\53Load</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Variables[User::LoadFullFileName].Properties[Value]" ValueType="String">
+		<ConfiguredValue>\\corpdpt02\dfs\eCW FTP Area\53Bank\53Dev\53Epic\53Load\</ConfiguredValue>
+	</Configuration>
+</DTSConfiguration>
