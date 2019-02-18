@@ -1,0 +1,5 @@
+C:\Users\QHI6494\Documents\Visual Studio 2015\Projects\SQLCodeUtility\SQLCodeUtility\bin\Release\SQLCodeUtility.exe.config
+C:\Users\QHI6494\Documents\Visual Studio 2015\Projects\SQLCodeUtility\SQLCodeUtility\bin\Release\SQLCodeUtility.exe
+C:\Users\QHI6494\Documents\Visual Studio 2015\Projects\SQLCodeUtility\SQLCodeUtility\bin\Release\SQLCodeUtility.pdb
+C:\Users\QHI6494\Documents\Visual Studio 2015\Projects\SQLCodeUtility\SQLCodeUtility\obj\Release\SQLCodeUtility.exe
+C:\Users\QHI6494\Documents\Visual Studio 2015\Projects\SQLCodeUtility\SQLCodeUtility\obj\Release\SQLCodeUtility.pdb
