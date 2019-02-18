@@ -1,7 +1,0 @@
-c:\users\qhi6494\documents\visual studio 2015\Projects\SQLCodeUtility\SQLCodeUtility\bin\Debug\SQLCodeUtility.exe.config
-C:\Users\QHI6494\documents\visual studio 2015\Projects\SQLCodeUtility\SQLCodeUtility\bin\Debug\SQLCodeUtility.exe
-C:\Users\QHI6494\documents\visual studio 2015\Projects\SQLCodeUtility\SQLCodeUtility\bin\Debug\SQLCodeUtility.pdb
-C:\Users\QHI6494\documents\visual studio 2015\Projects\SQLCodeUtility\SQLCodeUtility\obj\Debug\SQLCodeUtility.csprojResolveAssemblyReference.cache
-C:\Users\QHI6494\documents\visual studio 2015\Projects\SQLCodeUtility\SQLCodeUtility\obj\Debug\SQLCodeUtility.exe
-C:\Users\QHI6494\documents\visual studio 2015\Projects\SQLCodeUtility\SQLCodeUtility\obj\Debug\SQLCodeUtility.pdb
-C:\Users\QHI6494\Documents\Visual Studio 2015\Projects\SQLCodeUtility\SQLCodeUtility\bin\Debug\WindowsFormUtility.pdb
